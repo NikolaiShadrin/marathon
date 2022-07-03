@@ -13,12 +13,8 @@ public class Player {
         this.name = name;
         this.stamina = stamina;
 
-        if (countPlayers==6) {
-            return;
-        }
-        countPlayers = countPlayers +1;
-
-
+        if (countPlayers < 6)
+            countPlayers = countPlayers + 1;
 
     }
 
