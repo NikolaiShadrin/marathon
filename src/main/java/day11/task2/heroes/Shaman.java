@@ -13,7 +13,7 @@ public class Shaman extends Hero implements Healer, MagicAttack {
 
     @Override
     public void healHimself() {
-        if (health>HEALTH_MAX) {
+        if (health+50>HEALTH_MAX) {
             health = HEALTH_MAX;
         } else {health = health + 50;}
     }
