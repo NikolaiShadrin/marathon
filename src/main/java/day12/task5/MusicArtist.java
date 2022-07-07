@@ -4,6 +4,7 @@ public class MusicArtist {
     private String name;
     public int age;
 
+
     public MusicArtist(String name, int age) {
         this.name = name;
         this.age = age;
@@ -23,5 +24,13 @@ public class MusicArtist {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "MusicArtist{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

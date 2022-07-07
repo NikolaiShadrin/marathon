@@ -1,34 +1,25 @@
 package day12.task5;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MusicBand {
     private String name;
     public int year;
-    private MusicArtist x;
+    private List<MusicArtist> members;
 
 
-    public MusicBand(String name, int year) {
+    public MusicBand(String name, int year, List<MusicArtist> members) {
         this.name = name;
         this.year = year;
+        this.members = members;
     }
 
-    public MusicBand(String name, int year, List<String> members) {
-        this.name = name;
-        this.year = year;
-    }
-
-
-    public void transferMembers(MusicArtist a, MusicArtist b) { a.members.addAll(0,b.members);
+    public List<MusicArtist> getMembers() {
+        return members;
     }
 
     public void printMembers() {
         System.out.println(members);
-    }
-
-    public List<String> getMembers() {
-        return members;
     }
 
     @Override
@@ -53,5 +44,12 @@ public class MusicBand {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public static void transferMembers(MusicBand a, MusicBand b) {
+        for(MusicArtist members: a.getMembers()) {
+            b.getMembers().add(members);
+        }
+        a.getMembers().clear();
     }
 }
