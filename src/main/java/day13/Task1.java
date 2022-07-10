@@ -23,8 +23,12 @@ public class Task1 {
 
         user3.sendMessage(user1, "Отлично!");
 
+        user1.sendMessage(user3, "Илюша, классный");
+
 
         MessageDatabase.showDialog(user1,user3);
+
+        MessageDatabase.showDialog(user1, user3);
 
     }
 }
